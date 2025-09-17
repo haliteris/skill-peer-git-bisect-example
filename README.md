@@ -70,7 +70,7 @@ First, tell Git you want to start a bisect session.
 git bisect start
 ```
 
-###Step 2: Mark the `Bad` and `Good` Commits
+### Step 2: Mark the `Bad` and `Good` Commits
 
 Next, you need to tell Git the boundaries of the search.
 
@@ -90,7 +90,7 @@ git bisect bad HEAD
     git bisect good $FIRST_COMMIT
 ```
 
-Step 3: Automate the Search
+### Step 3: Automate the Search
 
 Git will now checkout a commit halfway between the `good` and `bad` ones. You could manually run `./demo.sh`, check the output, and type `git bisect good` or `git bisect bad` repeatedly.
 
@@ -99,7 +99,7 @@ However, our `demo.sh` script is perfect for automation because it exits with 0 
 git bisect run ./demo.sh
 ```
 
-Step 4: Analyze the Result
+### Step 4: Analyze the Result
 
 After a few seconds, git bisect will stop and print the result. The output will look something like this:
 
@@ -117,7 +117,7 @@ Date:   Wed Sep 07 18:38:35 2025 +0200
 
 Success! git bisect has identified "Commit 16" as the one that introduced the bug.
 
-###Step 5: Clean Up
+### Step 5: Clean Up
 
 Once you've found the culprit, you should end the bisect session to return your repository to its original state (HEAD).
 ```Bash
