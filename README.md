@@ -126,3 +126,5 @@ git bisect reset
 ```
 
 You're now back at your main branch, armed with the knowledge of exactly where the problem was introduced. Happy bug hunting! 🐛
+
+This project is licensed under the terms of the MIT license.
